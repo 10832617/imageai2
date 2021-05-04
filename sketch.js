@@ -28,7 +28,7 @@ function preload() {
 function setup() {
   createCanvas(320, 320);
   // Create the video
-  var constraints = {
+   var constraints = {
 
     audio: false,
 
@@ -49,6 +49,9 @@ function setup() {
     //}
 
   };
+
+
+
   video = createCapture(constraints);
   video.size(320, 320);
   video.hide();
@@ -86,7 +89,7 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   // console.log(results[0]);
   label = results[0].label;
-  ThunkableWebviewerExtension.postMessage(labe1);
+  ThunkableWebviewerExtension.postMessage(label);
   // Classifiy again!
   classifyVideo();
 }
